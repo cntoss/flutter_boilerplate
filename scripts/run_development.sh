@@ -1,0 +1,1 @@
+ flutter run -t lib/env/main_development.dart

@@ -1,0 +1,53 @@
+global_options:
+  freezed:freezed:
+    runs_before:
+      - isar_generator
+
+targets:
+  $default:
+    builders:
+      freezed:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/models/**.dart
+
+      json_serializable:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/models/**.dart
+
+      isar_generator:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/models/**_collection.dart
+
+      # go_router_builder:
+      #   enabled: true
+      #   generate_for:
+      #     include:
+      #       - lib/routing/router.dart
+
+      riverpod_generator:
+        enabled: true
+        generate_for:
+          include:
+            - lib/**/providers/**_provider.dart
+
+      i69n:yamlBasedBuilder:
+        enabled: true
+        generate_for:
+          include:
+            - lib/localization/localization.i69n.yaml
+
+      source_gen:combining_builder:
+        enabled: true
+        generate_for:
+          include:
+            - lib/localization/localization.i69n.yaml
+            - lib/**/models/**.dart
+            - lib/**/models/**_collection.dart
+            - lib/**/providers/**_provider.dart
+            - lib/routing/router.dart
