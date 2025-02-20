@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 class CCheckbox extends StatelessWidget {
   const CCheckbox({
@@ -25,7 +28,7 @@ class CCheckbox extends StatelessWidget {
     TextStyle? labelStyle,
     bool tristate,
     Color? activeColor,
-    MaterialStateProperty<Color?>? fillColor,
+    WidgetStateProperty<Color?>? fillColor,
     Color? checkColor,
     Color? focusColor,
     FocusNode? focusNode,
@@ -39,7 +42,7 @@ class CCheckbox extends StatelessWidget {
   final Color? activeColor;
   final bool autofocus;
   final Color? checkColor;
-  final MaterialStateProperty<Color?>? fillColor;
+  final WidgetStateProperty<Color?>? fillColor;
   final Color? focusColor;
   final FocusNode? focusNode;
   final bool isError;

@@ -1,8 +1,13 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/constants/ui_constant.dart';
 import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum ModalButtonType { small, medium, large }
 
@@ -94,13 +99,13 @@ class _CModalButton extends CElevatedButton {
           style: style ??
               (type == ModalButtonType.large
                   ? const ButtonStyle(
-                      elevation: MaterialStatePropertyAll(0),
+                      elevation: WidgetStatePropertyAll(0),
                     )
                   : type == ModalButtonType.medium
                       ? UIConstant.modalButtonStyle
                       : const ButtonStyle(
-                          elevation: MaterialStatePropertyAll(0),
-                          shape: MaterialStatePropertyAll(
+                          elevation: WidgetStatePropertyAll(0),
+                          shape: WidgetStatePropertyAll(
                             RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(10)),

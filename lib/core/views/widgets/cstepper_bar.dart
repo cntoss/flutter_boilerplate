@@ -1,6 +1,9 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/stepper_color.dart';
 import 'package:flutter_boilerplate/core/services/extensions.dart';
-import 'package:flutter/material.dart';
 
 class CSteps {
   const CSteps({

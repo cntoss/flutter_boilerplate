@@ -1,8 +1,15 @@
+// Dart imports:
 import 'dart:async';
 
+// Flutter imports:
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/app_theme.dart';
 import 'package:flutter_boilerplate/core/constants/repository_constant.dart';
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
@@ -15,7 +22,6 @@ import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/cerror.dart';
 import 'package:flutter_boilerplate/core/views/widgets/loader/cloader.dart';
 import 'package:flutter_boilerplate/features/onboarding/views/screens/splash_screen.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 Future<void> runBoilerplateApp(AppEnvironment environment) async {
   await runZonedGuarded(

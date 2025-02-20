@@ -1,8 +1,11 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/ctext_button.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-import 'package:flutter/material.dart';
 
 /// A top level function that can be used to show an alert dialog
 /// It also provides a default title as `Message` and `Close` as action

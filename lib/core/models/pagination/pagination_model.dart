@@ -1,3 +1,4 @@
+// Project imports:
 import 'package:flutter_boilerplate/core/services/typedef.dart';
 
 class PaginationModel<T> {

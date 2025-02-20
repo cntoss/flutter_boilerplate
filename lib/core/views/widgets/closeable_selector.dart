@@ -1,6 +1,9 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/constants/ui_constant.dart';
-import 'package:flutter/material.dart';
 
 /// selector
 class CSelectorCloseable extends StatelessWidget {

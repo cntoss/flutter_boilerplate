@@ -1,6 +1,10 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
-import 'package:flutter/material.dart';
+
 // import 'package:image_picker/image_picker.dart';
 
 // void _pickFailedDialog() {

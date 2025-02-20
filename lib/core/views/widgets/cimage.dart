@@ -1,6 +1,11 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter_boilerplate/generated/assets.gen.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:cached_network_image/cached_network_image.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/generated/assets.gen.dart';
 
 class CImage extends StatelessWidget {
   const CImage({

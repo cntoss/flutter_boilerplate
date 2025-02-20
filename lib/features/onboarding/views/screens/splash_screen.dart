@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/features/auth/models/user_collection.dart';
 import 'package:flutter_boilerplate/features/auth/services/isar_auth_service.dart';
 import 'package:flutter_boilerplate/routing/router.dart';

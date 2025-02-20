@@ -1,8 +1,13 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:dio/dio.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/models/base_error_response.dart';
 import 'package:flutter_boilerplate/core/services/typedef.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
-import 'package:flutter/material.dart';
 
 Widget Function(Object, StackTrace?) onNetworkError = (error, stackTrace) {
   if (error is DioException) {

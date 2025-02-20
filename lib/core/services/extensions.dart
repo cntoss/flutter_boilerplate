@@ -1,13 +1,19 @@
+// Dart imports:
 import 'dart:async';
 import 'dart:io';
 
+// Flutter imports:
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/typedef.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:intl/intl.dart';
 
 extension IterableExtension<T> on Iterable<T> {
   /// Maps each element and its index to a new value.

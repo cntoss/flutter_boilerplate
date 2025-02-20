@@ -1,6 +1,11 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+
+// Package imports:
 import 'package:google_fonts/google_fonts.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 TextStyle _getTextStyle(
   double? fontSize,

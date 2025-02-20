@@ -1,7 +1,10 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
-import 'package:flutter/material.dart';
 
 class CDropdown<T> extends StatelessWidget {
   const CDropdown({

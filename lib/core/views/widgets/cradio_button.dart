@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 class CRadio extends StatelessWidget {
   const CRadio({
@@ -46,7 +49,7 @@ class CRadio extends StatelessWidget {
           isSelected: true,
         ),
         style: const ButtonStyle(
-          shape: MaterialStatePropertyAll(CircleBorder()),
+          shape: WidgetStatePropertyAll(CircleBorder()),
         ),
       ),
     );

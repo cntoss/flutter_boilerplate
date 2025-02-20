@@ -1,12 +1,17 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:string_validator/string_validator.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/ctext_field.dart';
 import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/generated/assets.gen.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:string_validator/string_validator.dart';
 
 class ForgotPasswordScreen extends ConsumerStatefulWidget {
   const ForgotPasswordScreen({super.key});

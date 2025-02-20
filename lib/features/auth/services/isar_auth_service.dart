@@ -1,5 +1,7 @@
+// Dart imports:
 import 'dart:convert';
 
+// Project imports:
 import 'package:flutter_boilerplate/core/services/helpers/isar_helper.dart';
 import 'package:flutter_boilerplate/features/auth/models/login.dart';
 import 'package:flutter_boilerplate/features/auth/models/user_collection.dart';

@@ -1,8 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/providers/common_Provider.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/loader/cloader.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CTabBar<T> extends ConsumerStatefulWidget {
   const CTabBar({

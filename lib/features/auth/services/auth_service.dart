@@ -1,4 +1,7 @@
+// Package imports:
 import 'package:dio/dio.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/models/common_response_model.dart';
 import 'package:flutter_boilerplate/features/auth/constants/auth_repo_constant.dart';
 import 'package:flutter_boilerplate/features/auth/models/login.dart';

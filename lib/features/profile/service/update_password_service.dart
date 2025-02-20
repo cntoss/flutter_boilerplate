@@ -1,4 +1,7 @@
+// Package imports:
 import 'package:dio/dio.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/models/base_response.dart';
 import 'package:flutter_boilerplate/features/profile/constants/profile_repo_constants.dart';
 import 'package:flutter_boilerplate/features/profile/repository/update_password_repository.dart';

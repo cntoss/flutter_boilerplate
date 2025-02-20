@@ -1,8 +1,12 @@
+// Dart imports:
 import 'dart:math';
 
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/providers/app_state_provider.dart';
-import 'package:flutter/material.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 BuildContext get currentContext => navigatorKey.currentContext!;

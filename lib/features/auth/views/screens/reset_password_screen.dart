@@ -1,3 +1,6 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
@@ -9,7 +12,7 @@ import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/features/auth/models/reset_password/reset_password_request.dart';
 import 'package:flutter_boilerplate/features/auth/providers/reset_password/reset_password_provider.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-import 'package:flutter/material.dart';
+// Package imports:
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 export 'package:flutter_boilerplate/routing/router_class/auth_route.dart';

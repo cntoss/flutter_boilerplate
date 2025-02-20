@@ -1,3 +1,10 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/constants/ui_constant.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
@@ -5,8 +12,6 @@ import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/coutline_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// information with accept/reject options
 Future<T?> showInfoDialog<T>(
@@ -110,10 +115,10 @@ Future<T?> showInfoDialog<T>(
                             style: ButtonStyle(
                               backgroundColor: confirmButtonColor == null
                                   ? null
-                                  : MaterialStatePropertyAll(
+                                  : WidgetStatePropertyAll(
                                       confirmButtonColor,
                                     ),
-                              shape: const MaterialStatePropertyAll(
+                              shape: const WidgetStatePropertyAll(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.all(
                                     UIConstant.dialogCircular,
@@ -150,7 +155,7 @@ class _CancelButton extends StatelessWidget {
         right: 4,
       ),
       style: UIConstant.outlineStyle.copyWith(
-        padding: const MaterialStatePropertyAll(
+        padding: const WidgetStatePropertyAll(
           EdgeInsetsDirectional.symmetric(
             horizontal: 12,
             vertical: 8,

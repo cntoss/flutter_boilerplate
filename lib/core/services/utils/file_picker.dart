@@ -1,10 +1,16 @@
+// Dart imports:
 import 'dart:io';
 
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:file_picker/file_picker.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/utils/image_picker.dart';
 import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
 
 void _pickFailedDialog() {
   cAlertDialog<void>(

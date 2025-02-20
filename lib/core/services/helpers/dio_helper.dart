@@ -1,6 +1,11 @@
-import 'package:dio/dio.dart';
-import 'package:flutter_boilerplate/core/services/helpers/dio_interceptor.dart';
+// Flutter imports:
 import 'package:flutter/foundation.dart';
+
+// Package imports:
+import 'package:dio/dio.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/services/helpers/dio_interceptor.dart';
 
 /// A top level constant to access [Dio] client with customizations
 Dio get client {

@@ -1,3 +1,11 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:string_validator/string_validator.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
 import 'package:flutter_boilerplate/core/services/helpers/toast_helper.dart';
@@ -9,9 +17,6 @@ import 'package:flutter_boilerplate/core/views/widgets/ctext_field.dart';
 import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/features/auth/providers/login_provider.dart';
 import 'package:flutter_boilerplate/features/profile/providers/update_password_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:string_validator/string_validator.dart';
 
 class ChangePasswordScreen extends ConsumerStatefulWidget {
   const ChangePasswordScreen({super.key});

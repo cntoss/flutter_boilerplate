@@ -1,7 +1,10 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/features/auth/views/screens/forgot_password_screen.dart';
 import 'package:flutter_boilerplate/features/auth/views/screens/reset_password_screen.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-import 'package:flutter/material.dart';
 
 /// P
 class ForgotPasswordRoute extends GoRouteData {

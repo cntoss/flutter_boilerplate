@@ -1,6 +1,9 @@
+// Package imports:
 import 'package:dio/dio.dart';
-import 'package:flutter_boilerplate/core/services/typedef.dart';
 import 'package:json_annotation/json_annotation.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/services/typedef.dart';
 
 part 'base_response.g.dart';
 

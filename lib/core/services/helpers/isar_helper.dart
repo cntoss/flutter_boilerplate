@@ -1,6 +1,9 @@
-import 'package:flutter_boilerplate/features/auth/models/user_collection.dart';
+// Package imports:
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/features/auth/models/user_collection.dart';
 
 /// Top level variable to access the [Isar] instance
 ///

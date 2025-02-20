@@ -1,6 +1,9 @@
+// Package imports:
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/features/auth/models/login.dart';
 import 'package:flutter_boilerplate/features/auth/providers/auth_service_provider.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'login_provider.g.dart';
 

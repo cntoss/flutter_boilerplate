@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 class CRoundButton extends StatelessWidget {
   const CRoundButton({
@@ -26,10 +29,10 @@ class CRoundButton extends StatelessWidget {
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
-          padding: const MaterialStatePropertyAll(EdgeInsets.zero),
-          backgroundColor: MaterialStatePropertyAll(backgroundColor),
-          foregroundColor: MaterialStatePropertyAll(foregroundColor),
-          elevation: MaterialStatePropertyAll(elevation),
+          padding: const WidgetStatePropertyAll(EdgeInsets.zero),
+          backgroundColor: WidgetStatePropertyAll(backgroundColor),
+          foregroundColor: WidgetStatePropertyAll(foregroundColor),
+          elevation: WidgetStatePropertyAll(elevation),
         ),
         child: icon,
       ),

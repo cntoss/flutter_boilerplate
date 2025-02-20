@@ -1,6 +1,9 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 class CAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CAppBar({

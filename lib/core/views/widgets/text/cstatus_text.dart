@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 
 ///status refer to text only with background color
 class CStatusText extends StatelessWidget {

@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 
 class UIConstant {
   // Padding
@@ -35,11 +38,11 @@ class UIConstant {
   );
 
   static const ButtonStyle modalButtonStyle = ButtonStyle(
-    backgroundColor: MaterialStatePropertyAll(
+    backgroundColor: WidgetStatePropertyAll(
       UIColors.blueDark,
     ),
-    elevation: MaterialStatePropertyAll(0),
-    shape: MaterialStatePropertyAll(
+    elevation: WidgetStatePropertyAll(0),
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
@@ -47,11 +50,11 @@ class UIConstant {
   );
 
   static const ButtonStyle modalButtonStyleGreen = ButtonStyle(
-    backgroundColor: MaterialStatePropertyAll(
+    backgroundColor: WidgetStatePropertyAll(
       UIColors.greenPrimary,
     ),
-    elevation: MaterialStatePropertyAll(0),
-    shape: MaterialStatePropertyAll(
+    elevation: WidgetStatePropertyAll(0),
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
@@ -59,12 +62,12 @@ class UIConstant {
   );
 
   static const ButtonStyle outlineStyle = ButtonStyle(
-    shape: MaterialStatePropertyAll(
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
     ),
-    side: MaterialStatePropertyAll(
+    side: WidgetStatePropertyAll(
       BorderSide(
         color: UIColors.appBarSecondary,
       ),
@@ -78,15 +81,15 @@ class UIConstant {
             ),
           );
   static const ButtonStyle elevatedDialogButtonStyle = ButtonStyle(
-    shape: MaterialStatePropertyAll(
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(dialogCircular),
       ),
     ),
   );
   static const ButtonStyle redElevatedDialogButtonStyle = ButtonStyle(
-    backgroundColor: MaterialStatePropertyAll(Colors.red),
-    shape: MaterialStatePropertyAll(
+    backgroundColor: WidgetStatePropertyAll(Colors.red),
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(dialogCircular),
       ),
@@ -94,12 +97,12 @@ class UIConstant {
   );
 
   static const ButtonStyle dialogOutlineStyle = ButtonStyle(
-    shape: MaterialStatePropertyAll(
+    shape: WidgetStatePropertyAll(
       RoundedRectangleBorder(
         borderRadius: BorderRadius.all(dialogCircular),
       ),
     ),
-    side: MaterialStatePropertyAll(
+    side: WidgetStatePropertyAll(
       BorderSide(
         color: UIColors.appBarSecondary,
       ),

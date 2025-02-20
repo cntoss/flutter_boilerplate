@@ -1,8 +1,13 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
-import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
+import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
 
 part 'box_loader.dart';
 part 'list_tile_loader.dart';

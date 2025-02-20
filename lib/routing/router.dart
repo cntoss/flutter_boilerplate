@@ -1,4 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/features/auth/views/screens/change_password_screen.dart';
 import 'package:flutter_boilerplate/features/auth/views/screens/login_screen.dart';
 import 'package:flutter_boilerplate/features/onboarding/views/screens/splash_screen.dart';

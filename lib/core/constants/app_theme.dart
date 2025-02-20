@@ -1,9 +1,14 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+// Package imports:
+import 'package:google_fonts/google_fonts.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/constants/ui_colors_dark.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static final ThemeData dark = ThemeData.dark().copyWith(

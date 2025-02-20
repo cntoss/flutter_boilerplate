@@ -1,7 +1,10 @@
-import 'package:flutter_boilerplate/core/services/helpers/dio_extension.dart';
-import 'package:flutter_boilerplate/features/profile/service/update_password_service.dart';
+// Package imports:
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/services/helpers/dio_extension.dart';
+import 'package:flutter_boilerplate/features/profile/service/update_password_service.dart';
 
 part 'update_password_provider.g.dart';
 

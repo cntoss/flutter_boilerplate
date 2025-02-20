@@ -1,3 +1,7 @@
+// Package imports:
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/providers/bottom_bar_provider.dart';
 import 'package:flutter_boilerplate/core/providers/local_user_provider/local_user_provider.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
@@ -5,7 +9,6 @@ import 'package:flutter_boilerplate/features/auth/services/isar_auth_service.dar
 import 'package:flutter_boilerplate/features/auth/views/screens/login_screen.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
 import 'package:flutter_boilerplate/routing/router_service.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'app_session_provider.g.dart';
 // import 'package:flutter_boilerplate/features/profile/providers/user_profile_provider.dart';

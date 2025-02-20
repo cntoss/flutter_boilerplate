@@ -1,8 +1,12 @@
+// Package imports:
 import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/services/helpers/dio_interceptor.dart';
+
 import 'package:flutter_boilerplate/core/services/helpers/dio_helper.dart'
     as network;
-import 'package:flutter_boilerplate/core/services/helpers/dio_interceptor.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// Extensions for Riverpod with [Dio] client
 extension DioRiverpodExtension on Ref {

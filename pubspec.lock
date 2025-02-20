@@ -513,7 +513,7 @@ packages:
     source: hosted
     version: "2.4.0"
   import_sorter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: import_sorter
       sha256: eb15738ccead84e62c31e0208ea4e3104415efcd4972b86906ca64a1187d0836

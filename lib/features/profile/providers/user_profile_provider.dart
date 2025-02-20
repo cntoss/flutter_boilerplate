@@ -1,9 +1,12 @@
+// Package imports:
 import 'package:dio/dio.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/models/common_response_model.dart';
 import 'package:flutter_boilerplate/core/services/helpers/dio_extension.dart';
 import 'package:flutter_boilerplate/features/profile/models/profile.dart';
 import 'package:flutter_boilerplate/features/profile/service/user_profile_service.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'user_profile_provider.g.dart';
 

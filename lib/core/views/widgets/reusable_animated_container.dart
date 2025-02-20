@@ -1,6 +1,10 @@
 //Reusable Animated List view Container
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
+
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 
 class ReusableAnimationContainer extends StatefulWidget {
   const ReusableAnimationContainer({

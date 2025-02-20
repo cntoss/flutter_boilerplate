@@ -1,7 +1,14 @@
+// Dart imports:
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate/core/models/base_error_response.dart';
 import 'package:flutter_boilerplate/core/providers/app_session_provider.dart';
 import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
@@ -11,7 +18,6 @@ import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
 import 'package:flutter_boilerplate/features/auth/models/login.dart';
 import 'package:flutter_boilerplate/features/auth/models/user_collection.dart';
 import 'package:flutter_boilerplate/features/auth/services/isar_auth_service.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class DioInterceptor extends Interceptor {
   @override
