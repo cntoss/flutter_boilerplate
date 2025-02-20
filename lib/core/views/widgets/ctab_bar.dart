@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/core/models/enum/permission_enum.dart';
 import 'package:flutter_boilerplate/core/providers/common_Provider.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/loader/cloader.dart';
@@ -14,7 +13,6 @@ class CTabBar<T> extends ConsumerStatefulWidget {
     required this.child,
     super.key,
     this.onTap,
-    this.permission,
     this.floatingWidget,
     this.screenName,
     this.floatingButtonName,
@@ -27,7 +25,6 @@ class CTabBar<T> extends ConsumerStatefulWidget {
   final List<T> tabBarViewItem;
   final void Function(int)? onTap;
   final Widget child;
-  final Permission? permission;
   final Widget? screenName;
   final String? floatingButtonName;
   final Widget? floatingWidget;

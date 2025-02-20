@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/core/models/base_error_response.dart';
 import 'package:flutter_boilerplate/core/providers/app_session_provider.dart';
 import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
-import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/services/helpers/dio_logger.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
@@ -50,7 +49,6 @@ class DioInterceptor extends Interceptor {
         },
       );
     }
-    options.filterEmployee(user?.employeeID, user?.role);
     handler.next(options);
   }
 }

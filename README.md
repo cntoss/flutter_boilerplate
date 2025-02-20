@@ -8,7 +8,7 @@ This repository serves as a Flutter Boilerplate, providing a starting point for 
 
 A few resources to get you started:
 
-- Dependency Management: [get_it](https://pub.dev/packages/get_it)
+- Dependency Management: [Riverpod](https://pub.dev/packages/riverpod)
 - Database: [Isar](https://pub.dev/packages/isar)
 - State Management: [Riverpod](https://pub.dev/packages/riverpod)
 - Networking: [Dio](https://pub.dev/packages/dio)

@@ -62,21 +62,21 @@ class AppTheme {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: const MaterialStatePropertyAll(Colors.blue),
-        foregroundColor: const MaterialStatePropertyAll(UIColors.textLight),
-        shape: const MaterialStatePropertyAll(
+        backgroundColor: const WidgetStatePropertyAll(Colors.blue),
+        foregroundColor: const WidgetStatePropertyAll(UIColors.textLight),
+        shape: const WidgetStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),
-        minimumSize: const MaterialStatePropertyAll(Size(0, 56)),
-        textStyle: MaterialStatePropertyAll(
+        minimumSize: const WidgetStatePropertyAll(Size(0, 56)),
+        textStyle: WidgetStatePropertyAll(
           getSemiBoldStyle(
             color: UIColors.textLight,
             fontSize: 16,
           ),
         ),
-        padding: const MaterialStatePropertyAll(
+        padding: const WidgetStatePropertyAll(
           EdgeInsets.symmetric(horizontal: 16),
         ),
       ),
@@ -102,13 +102,13 @@ class AppTheme {
     ),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
-        shape: const MaterialStatePropertyAll(
+        shape: const WidgetStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(25)),
           ),
         ),
-        foregroundColor: const MaterialStatePropertyAll(UIColors.blueLight),
-        textStyle: MaterialStatePropertyAll(
+        foregroundColor: const WidgetStatePropertyAll(UIColors.blueLight),
+        textStyle: WidgetStatePropertyAll(
           getSemiBoldStyle(
             fontSize: 16,
           ),
@@ -144,19 +144,19 @@ class AppTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: ButtonStyle(
-        side: const MaterialStatePropertyAll(
+        side: const WidgetStatePropertyAll(
           BorderSide(
             color: UIColors.greenPrimary,
           ),
         ),
-        shape: const MaterialStatePropertyAll(
+        shape: const WidgetStatePropertyAll(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(25)),
           ),
         ),
-        minimumSize: const MaterialStatePropertyAll(Size(0, 56)),
-        foregroundColor: const MaterialStatePropertyAll(UIColors.white),
-        textStyle: MaterialStatePropertyAll(
+        minimumSize: const WidgetStatePropertyAll(Size(0, 56)),
+        foregroundColor: const WidgetStatePropertyAll(UIColors.white),
+        textStyle: WidgetStatePropertyAll(
           getSemiBoldStyle(
             fontSize: 16,
           ),
@@ -182,8 +182,8 @@ class AppTheme {
       ),
     ),
     checkboxTheme: CheckboxThemeData(
-      checkColor: const MaterialStatePropertyAll(UIColors.white),
-      fillColor: const MaterialStatePropertyAll(UIColors.blueLight),
+      checkColor: const WidgetStatePropertyAll(UIColors.white),
+      fillColor: const WidgetStatePropertyAll(UIColors.blueLight),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
     ),
   );

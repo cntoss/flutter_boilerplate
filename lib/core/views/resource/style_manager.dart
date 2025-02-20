@@ -1,5 +1,5 @@
-import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 TextStyle _getTextStyle(
@@ -61,14 +61,6 @@ TextStyle getRegularStyle({
     letterSpacing: letterSpacing,
   );
 }
-
-// light text style
-// TextStyle getLightStyle(
-//     {double fontSize = FontSize.s14, required Color color}) {
-//   return _getTextStyle(
-//       fontSize,FontWeightManager.light, color);
-// }
-// bold text style
 
 /// bold text style
 

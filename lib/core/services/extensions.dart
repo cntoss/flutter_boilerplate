@@ -1,11 +1,8 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:io';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/core/models/enum/role_enum.dart';
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/typedef.dart';
@@ -61,17 +58,6 @@ extension StringExtension on String {
     } else {
       return '${words.first[0].toUpperCase()}${words.last[0].toUpperCase()}';
     }
-    //If it is  required to get first latter for each word then un commit
-    //below code
-    /* 
-    String initials = '';
-    for (var word in words) {
-      if (word.isNotEmpty) {
-        initials += word[0].toUpperCase();
-      }
-    }
-
-    return initials; */
   }
 
   String getFirstName() {
@@ -230,21 +216,6 @@ extension MapExtension on JsonMap {
     return filteredMap;
   }
 
-  JsonMap getMapValues() {
-    final Map<String, dynamic> filteredMap = {};
-    forEach((key, value) {
-      if (value != null) {
-        if (value is JsonMap) {
-          // Recursively remove null values from nested maps
-          value.getMapValues();
-        } else {
-          filteredMap[key] = value;
-        }
-      }
-    });
-    return filteredMap;
-  }
-
   //Below convert list of queryParams into string url
   String toQueryString() {
     String constructNestedQueryString(JsonMap params) {
@@ -270,33 +241,5 @@ extension MapExtension on JsonMap {
     });
 
     return '?${parts.join('&')}';
-  }
-}
-
-extension HexColor on Color {
-  /// Prefixes a `#` if [withHash] is `true`.
-  /// Discards alpha if [omitAlpha] is `true`.
-  String toHex({
-    bool withHash = true,
-    bool omitAlpha = true,
-  }) {
-    return '${withHash ? '#' : ''}'
-            '${omitAlpha ? '' : alpha.toRadixString(16).padLeft(2, '0')}'
-            '${red.toRadixString(16).padLeft(2, '0')}'
-            '${green.toRadixString(16).padLeft(2, '0')}'
-            '${blue.toRadixString(16).padLeft(2, '0')}'
-        .toUpperCase();
-  }
-}
-
-extension RequestOptionExtension on RequestOptions {
-  void filterEmployee(int? employeeId, String? role) {
-    if (headers.containsKey('query') && role != Role.admin.name) {
-      queryParameters.addAll({
-        'filters': jsonEncode({'employee': employeeId}),
-      });
-    } else {
-      headers.removeWhere((key, value) => key.contains('query'));
-    }
   }
 }
