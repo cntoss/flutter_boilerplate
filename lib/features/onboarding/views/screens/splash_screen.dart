@@ -17,8 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future<void>.delayed(const Duration(seconds: 1))
-        .then((value) => checkLogin());
+    Future<void>.delayed(
+      const Duration(seconds: 1),
+    ).then((value) => checkLogin());
   }
 
   //await const AddPaymentRoute().pushReplacement<void, void>(context);
@@ -38,8 +39,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Splash')),
-    );
+    return const Scaffold(body: Center(child: Text('Splash')));
   }
 }

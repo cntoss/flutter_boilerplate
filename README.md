@@ -1,6 +1,14 @@
 # flutter_boilerplate
 
-A Flutter Boilerplate.
+A Flutter Boilerplate project with pre-built atomic widgets, common providers, and authentication setup to kickstart your application development.
+
+## Purpose
+
+This boilerplate provides:
+- Pre-built atomic widgets for consistent UI development
+- Common providers for state management
+- Authentication setup with common flows
+- Structured architecture for scalable applications
 
 ## Getting Started
 
@@ -12,6 +20,27 @@ A few resources to get you started:
 - Database: [Isar](https://pub.dev/packages/isar)
 - State Management: [Riverpod](https://pub.dev/packages/riverpod)
 - Networking: [Dio](https://pub.dev/packages/dio)
+
+## Pre-built Components
+
+### Atomic Widgets
+- Buttons (Primary, Secondary, Text)
+- Input fields (Text, Password, Email)
+- Cards
+- Lists
+- Typography components
+
+### Common Providers
+- Theme provider
+- Authentication provider
+- Navigation provider
+- Network state provider
+
+### Authentication Features
+- Login/Signup flows
+- Password reset
+- Token management
+- Session handling
 
 ## Project File Structure
 

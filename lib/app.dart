@@ -87,10 +87,10 @@ class BoilerplateApp extends ConsumerStatefulWidget {
   const BoilerplateApp({super.key});
 
   @override
-  ConsumerState<BoilerplateApp> createState() => _ErpAppState();
+  ConsumerState<BoilerplateApp> createState() => _BoilerplateAppState();
 }
 
-class _ErpAppState extends ConsumerState<BoilerplateApp> {
+class _BoilerplateAppState extends ConsumerState<BoilerplateApp> {
   @override
   void initState() {
     super.initState();

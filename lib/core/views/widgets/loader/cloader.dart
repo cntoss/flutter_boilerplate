@@ -14,11 +14,7 @@ part 'list_tile_loader.dart';
 part 'text_loader.dart';
 
 class CLoader extends ConsumerWidget {
-  const CLoader({
-    this.child,
-    this.independent = false,
-    super.key,
-  });
+  const CLoader({this.child, this.independent = false, super.key});
 
   const factory CLoader.box({
     required double height,
@@ -38,11 +34,8 @@ class CLoader extends ConsumerWidget {
     bool dense,
   }) = _ListTileLoader;
 
-  const factory CLoader.text({
-    bool enabled,
-    int length,
-    double fontSize,
-  }) = _TextLoader;
+  const factory CLoader.text({bool enabled, int length, double fontSize}) =
+      _TextLoader;
 
   final Widget? child;
 
@@ -65,16 +58,11 @@ class CLoader extends ConsumerWidget {
           // it does not need extra handling like enabling pointer,
           // compatibility with global loader, dio.hideLoader extension, etc.
           if (buttonStates.isNotEmpty)
-            const ColoredBox(
-              color: Colors.transparent,
-              child: Center(),
-            )
+            const ColoredBox(color: Colors.transparent, child: Center())
           else
             ColoredBox(
-              color: UIColors.black.withOpacity(0.1),
-              child: const Center(
-                child: RefreshProgressIndicator(),
-              ),
+              color: UIColors.black.withAlpha((0.1 * 255).toInt()),
+              child: const Center(child: RefreshProgressIndicator()),
             ),
       ],
     );

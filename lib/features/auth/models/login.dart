@@ -1,6 +1,3 @@
-// Flutter imports:
-import 'package:flutter/foundation.dart';
-
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -36,14 +33,13 @@ class LoginResponse with _$LoginResponse {
 
 @freezed
 class Token with _$Token {
-  const factory Token({
-    AccessToken? accessToken,
-    String? plainTextToken,
-  }) = _Token;
+  const factory Token({AccessToken? accessToken, String? plainTextToken}) =
+      _Token;
 
   factory Token.fromJson(Map<String, dynamic> json) => _$TokenFromJson(json);
 }
 
+@JsonSerializable()
 @freezed
 class AccessToken with _$AccessToken {
   const factory AccessToken({
