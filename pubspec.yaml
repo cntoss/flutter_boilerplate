@@ -1,5 +1,5 @@
 name: flutter_boilerplate
-description: "A new Flutter project."
+description: "A boilerplate Flutter project with essential dependencies and configurations for rapid development."
 publish_to: "none"
 
 version: 1.0.0+1
@@ -58,15 +58,16 @@ dev_dependencies:
 
   isar_generator: ^3.1.0+1
   build_runner: ^2.4.15
+  # automate asset management
   flutter_gen_runner: ^5.10.0
   freezed: ^3.0.4
-  json_serializable: ^6.9.4
+  # json_serializable: ^6.9.4
   riverpod_generator: ^2.6.5
 
   # Linters and formatters
   custom_lint: ^0.7.5
   riverpod_lint: ^2.6.5
-  very_good_analysis: ^7.0.0
+  # very_good_analysis: ^7.0.0
   flutter_lints: ^5.0.0
 
 dependency_overrides:

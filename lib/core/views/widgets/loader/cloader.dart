@@ -39,10 +39,10 @@ class CLoader extends ConsumerWidget {
 
   final Widget? child;
 
-  /// Control whether loader should be shown indpendent of the provider.
+  /// Control whether loader should be shown independent of the provider.
   /// This is useful when we need to show the loader in general use cases
   /// without the need or being dependent on the provider.
-  /// User should take responsiblity to turn of the independent loader.
+  /// User should take responsibility to turn of the independent loader.
   final bool independent;
 
   @override

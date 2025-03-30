@@ -1,11 +1,11 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 // Project imports:
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
+import 'package:flutter_boilerplate/core/views/atom/gap.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
-import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 
 class CError extends StatelessWidget {
   const CError({
@@ -45,10 +45,7 @@ class CError extends StatelessWidget {
           Text(
             message!,
             textAlign: TextAlign.center,
-            style: getMediumStyle(
-              color: const Color(0xff343434),
-              fontSize: 16,
-            ),
+            style: getMediumStyle(color: const Color(0xff343434), fontSize: 16),
           ),
         ],
         if (onPressed != null) ...[
@@ -56,7 +53,7 @@ class CError extends StatelessWidget {
           CElevatedButton.modal(
             text: buttonText,
             onPressed: onPressed,
-            width: mediaWidth(context) / 2,
+            width: AppSizes().mediaWidth(context) / 2,
           ),
         ],
       ],

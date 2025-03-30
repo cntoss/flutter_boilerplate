@@ -51,7 +51,7 @@ class CTextField extends StatelessWidget {
   final FocusNode? focusNode;
   final String? initialValue;
 
-  ///For  formating phone numner
+  ///For  formatting phone number
   final List<TextInputFormatter>? inputFormatters;
 
   final TextInputType? keyboardType;
@@ -90,7 +90,8 @@ class CTextField extends StatelessWidget {
         textAlign: textAlign,
         focusNode: focusNode,
         keyboardType: keyboardType,
-        decoration: decoration?.copyWith(labelText: labelText) ??
+        decoration:
+            decoration?.copyWith(labelText: labelText) ??
             InputDecoration(
               labelText: labelText,
               labelStyle: labelStyle,
@@ -113,20 +114,22 @@ class CTextField extends StatelessWidget {
         maxLength: maxLength,
         onChanged: onChanged,
         onTap: onTap,
-        onTapOutside: unFocusOnTapOutside
-            ? (event) => FocusScope.of(context).unfocus()
-            : null,
+        onTapOutside:
+            unFocusOnTapOutside
+                ? (event) => FocusScope.of(context).unfocus()
+                : null,
         onEditingComplete: onEditingComplete,
         onFieldSubmitted: onFieldSubmitted,
         onSaved: onSaved,
-        validator: validator ??
+        validator:
+            validator ??
             (validationMessage != null
                 ? (text) {
-                    if ((text ?? '').trim().isEmpty) {
-                      return validationMessage;
-                    }
-                    return null;
+                  if ((text ?? '').trim().isEmpty) {
+                    return validationMessage;
                   }
+                  return null;
+                }
                 : null),
         enabled: enabled,
         autovalidateMode: autovalidateMode,

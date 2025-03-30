@@ -13,10 +13,7 @@ import 'package:flutter_boilerplate/core/services/utils/image_picker.dart';
 import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
 
 void _pickFailedDialog() {
-  cAlertDialog<void>(
-    context: currentContext,
-    content: const Text('Failed!'),
-  );
+  cAlertDialog<void>(context: currentContext, content: const Text('Failed!'));
 }
 
 class CFilePicker {

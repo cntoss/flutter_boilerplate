@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:string_validator/string_validator.dart';
 
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/services/extensions.dart';
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
 import 'package:flutter_boilerplate/core/services/helpers/toast_helper.dart';
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/validator/common_validator.dart';
+import 'package:flutter_boilerplate/core/views/atom/gap.dart';
 import 'package:flutter_boilerplate/core/views/widgets/capp_bar.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/ctext_field.dart';
-import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/features/auth/providers/login_provider.dart';
 import 'package:flutter_boilerplate/features/profile/providers/update_password_provider.dart';
 
@@ -53,9 +53,9 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
             _newPasswordController.text,
           )
           .onSuccess((data) {
-        showToast(data ?? 'Success');
-        Navigator.pop(context);
-      });
+            showToast(data ?? 'Success');
+            Navigator.pop(context);
+          });
     }
   }
 
@@ -66,11 +66,7 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
     final confirmPasswordVisible = ref.watch(confirmPasswordVisibilityProvider);
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: const CAppBar(
-        title: Text(
-          'Change Password',
-        ),
-      ),
+      appBar: const CAppBar(title: Text('Change Password')),
       body: Form(
         key: _formKey,
         child: Padding(
@@ -82,9 +78,7 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
           ),
           child: ListView(
             children: [
-              SizedBox(
-                height: mediaHeight(context) / 5,
-              ),
+              SizedBox(height: sz.mediaHeight(context) / 5),
               CTextField(
                 controller: _oldPasswordController,
                 labelText: 'Old Password',
@@ -188,7 +182,7 @@ class _ChangePasswordScreenState extends ConsumerState<ChangePasswordScreen> {
               ),
               const VGap(20),
               CElevatedButton.modal(
-                width: mediaWidth(context),
+                width: sz.mediaWidth(context),
                 text: 'Update',
                 onPressed: _updatePassword,
               ),

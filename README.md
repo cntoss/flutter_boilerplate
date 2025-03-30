@@ -2,6 +2,46 @@
 
 A Flutter Boilerplate project with pre-built atomic widgets, common providers, and authentication setup to kickstart your application development.
 
+## Installation
+
+1. Clone this repo:
+    ```bash
+    git clone https://github.com/cntoss/flutter_boilerplate.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd flutter_boilerplate
+    ```
+3. Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+
+## Updating Dependencies
+
+1. Update Flutter packages:
+```bash
+flutter pub get
+```
+
+2. Generate code (when needed):
+```bash
+dart run build_runner build --delete-conflicting-outputs
+```
+
+3. Sort imports (when needed):
+```bash
+dart run import_sorter:main
+```
+
+## Usage
+
+Once dependencies are installed, run the following to start the app:
+
+```bash
+flutter run
+```
+
 ## Purpose
 
 This boilerplate provides:

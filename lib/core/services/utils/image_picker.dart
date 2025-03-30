@@ -24,8 +24,10 @@ Future<bool> exceedsFileSize(int fileBytes, double maxBytes) async {
     final String unit = maxBytes >= mb ? 'MB' : 'KB';
     await cAlertDialog<void>(
       context: currentContext,
-      content: Text('File size should be less than '
-          '${size.toStringAsFixed(2)} $unit'),
+      content: Text(
+        'File size should be less than '
+        '${size.toStringAsFixed(2)} $unit',
+      ),
     );
     return true;
   }

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:string_validator/string_validator.dart';
 
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/services/extensions.dart';
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
+import 'package:flutter_boilerplate/core/views/atom/gap.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/ctext_field.dart';
-import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/generated/assets.gen.dart';
 
 class ForgotPasswordScreen extends ConsumerStatefulWidget {
@@ -44,20 +44,14 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: const Text('Forgot Password'),
-      ),
+      appBar: AppBar(title: const Text('Forgot Password')),
       body: Stack(
         children: [
           ListView(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             children: [
               const VGap(30),
-              Align(
-                child: Assets.images.logo.image(
-                  height: 100,
-                ),
-              ),
+              Align(child: Assets.images.logo.image(height: 100)),
               const VGap(100),
               Form(
                 key: formKey,
@@ -75,9 +69,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
               const VGap(15),
               const Padding(
                 padding: EdgeInsets.only(left: 8),
-                child: Text(
-                  'We will send you a link to reset your password',
-                ),
+                child: Text('We will send you a link to reset your password'),
               ),
             ],
           ),
@@ -88,7 +80,7 @@ class _ForgotPasswordScreenState extends ConsumerState<ForgotPasswordScreen> {
             child: CElevatedButton(
               text: 'Send Reset Link',
               onPressed: sendResetLink,
-              width: mediaWidth(context),
+              width: sz.mediaWidth(context),
             ),
           ),
         ],

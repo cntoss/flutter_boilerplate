@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/services/helpers/log_helper.dart';
-import 'package:flutter_boilerplate/core/views/widgets/ctext_button.dart';
+import 'package:flutter_boilerplate/core/views/atom/ctext_button.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
 
 /// A top level function that can be used to show an alert dialog
@@ -32,23 +32,18 @@ Future<T?> cAlertDialog<T>({
       return AlertDialog.adaptive(
         actionsAlignment: actionsAlignment,
         backgroundColor: UIColors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        title: title ??
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        title:
+            title ??
             const Text(
               'Error Message',
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
             ),
         content: content,
-        actions: actions ??
-            [
-              CTextButton(
-                text: 'Close',
-                onPressed: () => context.pop(),
-              ),
-            ],
+        actions:
+            actions ??
+            [CTextButton(text: 'Close', onPressed: () => context.pop())],
       );
     },
   ).then((value) {

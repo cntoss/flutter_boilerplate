@@ -1,10 +1,8 @@
-// Dart imports:
+// Package imports:
 import 'dart:convert';
 
-// Flutter imports:
 import 'package:flutter/material.dart';
 
-// Package imports:
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,7 +10,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_boilerplate/core/models/base_error_response.dart';
 import 'package:flutter_boilerplate/core/providers/app_session_provider.dart';
 import 'package:flutter_boilerplate/core/providers/loader_provider.dart';
-import 'package:flutter_boilerplate/core/services/helpers/dio_logger.dart';
+// Project imports:
+import 'package:flutter_boilerplate/core/services/helpers/dio/dio_logger.dart';
 import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/widgets/calert_dialog.dart';
 import 'package:flutter_boilerplate/features/auth/models/login.dart';
@@ -32,9 +31,9 @@ class DioInterceptor extends Interceptor {
       // ProviderScope is preferred here because of special case
       // Unless you know what it does, don't use it anywhere else
       // Refer to docs first and make sure the use case fits
-      await ProviderScope.containerOf(currentContext)
-          .read(appSessionProvider.notifier)
-          .logout();
+      await ProviderScope.containerOf(
+        currentContext,
+      ).read(appSessionProvider.notifier).logout();
     }
     handler.next(err);
   }
@@ -48,12 +47,10 @@ class DioInterceptor extends Interceptor {
     if (user?.token != null) {
       final decodedToken = jsonDecode(user!.token!) as Map<String, dynamic>;
       final token = LoginResponse.fromJson(decodedToken);
-      options.headers.addAll(
-        {
-          'authorization': 'Bearer ${token.accesstoken?.plainTextToken}',
-          'accept': 'application/json',
-        },
-      );
+      options.headers.addAll({
+        'authorization': 'Bearer ${token.accesstoken?.plainTextToken}',
+        'accept': 'application/json',
+      });
     }
     handler.next(options);
   }

@@ -1,8 +1,15 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:string_validator/string_validator.dart';
+
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
+// Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/providers/local_user_provider/local_user_provider.dart';
 import 'package:flutter_boilerplate/core/services/extensions.dart';
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/validator/common_validator.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
@@ -13,8 +20,6 @@ import 'package:flutter_boilerplate/features/auth/providers/login_provider.dart'
 import 'package:flutter_boilerplate/features/auth/services/isar_auth_service.dart';
 import 'package:flutter_boilerplate/generated/assets.gen.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:string_validator/string_validator.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -70,9 +75,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         password: passwordController.text.trim(),
       );
 
-      ref
-          .read(loginProvider(loginDetail).future)
-          .onSuccess((loginResponse) async {
+      ref.read(loginProvider(loginDetail).future).onSuccess((
+        loginResponse,
+      ) async {
         await LoginHelper().updateAppStateAfterLogin(ref, loginResponse);
       });
     }
@@ -87,9 +92,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       body: ListView(
         children: [
           const SizedBox(height: 50),
-          Assets.images.logo.image(
-            height: mediaHeight(context) / 6,
-          ),
+          Assets.images.logo.image(height: sz.mediaHeight(context) / 6),
           const SizedBox(height: 50),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -116,9 +119,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         decoration: InputDecoration(
                           labelStyle: textStyle,
-                          errorStyle: const TextStyle(
-                            color: Color(0xffFF6870),
-                          ),
+                          errorStyle: const TextStyle(color: Color(0xffFF6870)),
                         ),
                       ),
                       CTextField(
@@ -138,15 +139,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                         },
                         decoration: InputDecoration(
                           labelStyle: textStyle,
-                          errorStyle: const TextStyle(
-                            color: Color(0xffFF6870),
-                          ),
+                          errorStyle: const TextStyle(color: Color(0xffFF6870)),
                           suffixIcon: IconButton(
                             onPressed: () {
                               ref
-                                  .read(
-                                    loginPasswordObscureProvider.notifier,
-                                  )
+                                  .read(loginPasswordObscureProvider.notifier)
                                   .toggle();
                             },
                             icon: Icon(
@@ -160,30 +157,28 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                       Row(
                         children: [
-                          localUserWatcher.onSuccess(
-                            (userInfo) {
-                              return Checkbox.adaptive(
-                                value: userInfo?.isRemember ?? false,
-                                onChanged: (value) {
-                                  if (value != null) {
-                                    IsarAuthService()
-                                        .toggleRemember(isRemember: value);
-                                    ref.invalidate(localUserProvider);
-                                  }
-                                },
-                              );
-                            },
-                          ),
-                          Text(
-                            'Remember Me',
-                            style: getRegularStyle(),
-                          ),
+                          localUserWatcher.onSuccess((userInfo) {
+                            return Checkbox.adaptive(
+                              value: userInfo?.isRemember ?? false,
+                              onChanged: (value) {
+                                if (value != null) {
+                                  IsarAuthService().toggleRemember(
+                                    isRemember: value,
+                                  );
+                                  ref.invalidate(localUserProvider);
+                                }
+                              },
+                            );
+                          }),
+                          Text('Remember Me', style: getRegularStyle()),
                           const Spacer(),
                           Semantics(
                             button: true,
                             child: InkWell(
-                              onTap: () => const ForgotPasswordRoute()
-                                  .push<void>(context),
+                              onTap:
+                                  () => const ForgotPasswordRoute().push<void>(
+                                    context,
+                                  ),
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(
                                   vertical: 19,
@@ -201,7 +196,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       ),
                       CElevatedButton(
                         margin: const EdgeInsets.only(bottom: 20),
-                        width: mediaWidth(context),
+                        width: sz.mediaWidth(context),
                         text: 'Log In',
                         onPressed: login,
                       ),

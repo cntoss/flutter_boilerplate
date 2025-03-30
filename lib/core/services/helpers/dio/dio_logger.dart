@@ -1,7 +1,6 @@
-// Dart imports:
+// Package imports:
 import 'dart:convert';
 
-// Package imports:
 import 'package:dio/dio.dart';
 
 // Project imports:
@@ -89,6 +88,6 @@ String _errorType(DioExceptionType type) {
     DioExceptionType.badResponse => 'Bad Response',
     DioExceptionType.cancel => 'Request Cancelled',
     DioExceptionType.connectionError => 'Connection Error',
-    DioExceptionType.unknown => 'Unknown'
+    DioExceptionType.unknown => 'Unknown',
   };
 }

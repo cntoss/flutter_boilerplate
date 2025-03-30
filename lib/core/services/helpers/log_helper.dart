@@ -37,7 +37,7 @@ void printLog(
   if (kDebugMode) {
     Object? encodedMessage;
     try {
-      // If the message is valid JSON, preetify it.
+      // If the message is valid JSON, prettify it.
       // Useful for api responses
       const JsonEncoder encoder = JsonEncoder.withIndent('  ');
       encodedMessage = encoder.convert(message);

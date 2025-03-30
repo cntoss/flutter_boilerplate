@@ -3,14 +3,14 @@ import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // Project imports:
-import 'package:flutter_boilerplate/core/services/helpers/dio_interceptor.dart';
+import 'package:flutter_boilerplate/core/services/helpers/dio/dio_interceptor.dart';
 
-import 'package:flutter_boilerplate/core/services/helpers/dio_helper.dart'
+import 'package:flutter_boilerplate/core/services/helpers/dio/dio_helper.dart'
     as network;
 
 /// Extensions for Riverpod with [Dio] client
 extension DioRiverpodExtension on Ref {
-  /// Adds loader, request cancellor and response dialog
+  /// Adds loader, request canceller and response dialog
   Dio get client {
     final Dio dio = network.client;
     dio.interceptors.add(DioLoaderInterceptor(this));
@@ -29,8 +29,9 @@ extension DioExtension on Dio {
 
   /// Client without error message dialog
   Dio get hideMessage {
-    interceptors
-        .removeWhere((element) => element is DioErrorMessageInterceptor);
+    interceptors.removeWhere(
+      (element) => element is DioErrorMessageInterceptor,
+    );
     return this;
   }
 }

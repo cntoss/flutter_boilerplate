@@ -1,19 +1,21 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/services/extensions.dart';
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/services/validator/auth_validation.dart';
+import 'package:flutter_boilerplate/core/views/atom/gap.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/ctext_field.dart';
-import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
 import 'package:flutter_boilerplate/features/auth/models/reset_password/reset_password_request.dart';
 import 'package:flutter_boilerplate/features/auth/providers/reset_password/reset_password_provider.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
-// Package imports:
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 export 'package:flutter_boilerplate/routing/router_class/auth_route.dart';
 
@@ -49,9 +51,7 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Form(
                   key: formKey,
                   child: Column(
@@ -104,24 +104,24 @@ class _ResetPasswordScreenState extends ConsumerState<ResetPasswordScreen> {
                           if (formKey.isValid) {
                             ref
                                 .watch(
-                              resetPasswordProvider(
-                                ResetPasswordRequest(
-                                  password: passwordController.text,
-                                  passwordConfirmation:
-                                      confirmPasswordController.text,
-                                  username: usernameController.textOrNull(),
-                                  token: widget.token,
-                                ),
-                              ).future,
-                            )
-                                .onSuccess(
-                              (data) {
-                                const ForgotPasswordRoute().push<void>(context);
-                              },
-                            );
+                                  resetPasswordProvider(
+                                    ResetPasswordRequest(
+                                      password: passwordController.text,
+                                      passwordConfirmation:
+                                          confirmPasswordController.text,
+                                      username: usernameController.textOrNull(),
+                                      token: widget.token,
+                                    ),
+                                  ).future,
+                                )
+                                .onSuccess((data) {
+                                  const ForgotPasswordRoute().push<void>(
+                                    context,
+                                  );
+                                });
                           }
                         },
-                        width: mediaWidth(context),
+                        width: sz.mediaWidth(context),
                       ),
                     ],
                   ),

@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/models/base_response.dart';
 import 'package:flutter_boilerplate/core/models/common_response_model.dart';
-import 'package:flutter_boilerplate/core/services/helpers/dio_extension.dart';
+import 'package:flutter_boilerplate/core/services/helpers/dio/dio_extension.dart';
 import 'package:flutter_boilerplate/features/profile/constants/profile_repo_constants.dart';
 import 'package:flutter_boilerplate/features/profile/models/profile.dart';
 import 'package:flutter_boilerplate/features/profile/repository/user_profile_repository.dart';
@@ -16,8 +16,10 @@ class UserProfileService implements UserProfileRepository {
 
   @override
   Future<CommonResponseModel> updateProfileImage(FormData data) async {
-    final Response<Map<String, dynamic>> response =
-        await dio.post(ProfileRepoConstant.userProfile, data: data);
+    final Response<Map<String, dynamic>> response = await dio.post(
+      ProfileRepoConstant.userProfile,
+      data: data,
+    );
     return CommonResponseModel.fromJson(response.data!);
   }
 
@@ -27,9 +29,6 @@ class UserProfileService implements UserProfileRepository {
       ProfileRepoConstant.userProfile,
     );
 
-    return response.dataModel<Profile>(
-      response,
-      Profile.fromJson,
-    );
+    return response.dataModel<Profile>(response, Profile.fromJson);
   }
 }

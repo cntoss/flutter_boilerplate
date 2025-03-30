@@ -1,17 +1,17 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 // Project imports:
 import 'package:flutter_boilerplate/core/constants/ui_colors.dart';
 import 'package:flutter_boilerplate/core/constants/ui_constant.dart';
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/cmodal_bottom_sheet.dart';
 
 Future<T?> mediumBottomSheet<T>({
   required BuildContext context,
   required List<Widget> children,
-  required String titile,
+  required String title,
   double? dividerThickness,
   Color? color,
   Color? titleColor,
@@ -24,7 +24,7 @@ Future<T?> mediumBottomSheet<T>({
     clipBehavior: Clip.antiAliasWithSaveLayer,
     color: color,
     child: SizedBox(
-      height: mediaHeight(context) * 0.715,
+      height: sz.mediaHeight(context) * 0.715,
       child: Column(
         children: [
           Padding(
@@ -33,7 +33,7 @@ Future<T?> mediumBottomSheet<T>({
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  titile,
+                  title,
                   style: getBoldStyle(
                     fontSize: 18,
                     color: titleColor ?? UIColors.textPrimary,
@@ -43,17 +43,13 @@ Future<T?> mediumBottomSheet<T>({
                   alignment: Alignment.topRight,
                   child: Padding(
                     padding: const EdgeInsets.only(right: 10),
-                    child: CloseButton(
-                      color: titleColor,
-                    ),
+                    child: CloseButton(color: titleColor),
                   ),
                 ),
               ],
             ),
           ),
-          const Divider(
-            thickness: 1,
-          ),
+          const Divider(thickness: 1),
           ...children,
         ],
       ),

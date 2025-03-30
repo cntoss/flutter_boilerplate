@@ -10,7 +10,7 @@ import 'package:flutter_boilerplate/core/constants/ui_constant.dart';
 import 'package:flutter_boilerplate/core/views/resource/style_manager.dart';
 import 'package:flutter_boilerplate/core/views/widgets/celevated_button.dart';
 import 'package:flutter_boilerplate/core/views/widgets/coutline_button.dart';
-import 'package:flutter_boilerplate/core/views/widgets/gap.dart';
+import 'package:flutter_boilerplate/core/views/atom/gap.dart';
 import 'package:flutter_boilerplate/routing/router.dart';
 
 /// information with accept/reject options
@@ -47,12 +47,11 @@ Future<T?> showInfoDialog<T>(
       return AlertDialog(
         actionsAlignment: actionsAlignment,
         backgroundColor: UIColors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         titlePadding: allowTitlePadding ? titlePadding : null,
         // contentPadding: const EdgeInsets.symmetric(vertical: 4),
-        title: title ??
+        title:
+            title ??
             Icon(
               Icons.info,
               color: isError ? Colors.red : UIColors.blueLight,
@@ -62,15 +61,12 @@ Future<T?> showInfoDialog<T>(
         actionsPadding: actionsPadding,
         content: SizedBox(
           width: width,
-          child: content ??
+          child:
+              content ??
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  if (showInfoText)
-                    Text(
-                      infoText,
-                      style: getBoldStyle(),
-                    ),
+                  if (showInfoText) Text(infoText, style: getBoldStyle()),
                   if (message != null) ...[
                     const VGap(8),
                     Text(
@@ -83,15 +79,17 @@ Future<T?> showInfoDialog<T>(
                 ],
               ),
         ),
-        actions: actions ??
+        actions:
+            actions ??
             [
               if (showCancelButton)
                 SizedBox(
                   height: 35,
                   child: Row(
-                    mainAxisAlignment: (showCancelButton && showConfirmButton)
-                        ? MainAxisAlignment.spaceBetween
-                        : MainAxisAlignment.center,
+                    mainAxisAlignment:
+                        (showCancelButton && showConfirmButton)
+                            ? MainAxisAlignment.spaceBetween
+                            : MainAxisAlignment.center,
                     children: [
                       if (cancelWidth != null)
                         SizedBox(
@@ -113,11 +111,12 @@ Future<T?> showInfoDialog<T>(
                           child: CElevatedButton(
                             width: confirmWidth,
                             style: ButtonStyle(
-                              backgroundColor: confirmButtonColor == null
-                                  ? null
-                                  : WidgetStatePropertyAll(
-                                      confirmButtonColor,
-                                    ),
+                              backgroundColor:
+                                  confirmButtonColor == null
+                                      ? null
+                                      : WidgetStatePropertyAll(
+                                        confirmButtonColor,
+                                      ),
                               shape: const WidgetStatePropertyAll(
                                 RoundedRectangleBorder(
                                   borderRadius: BorderRadius.all(
@@ -141,25 +140,17 @@ Future<T?> showInfoDialog<T>(
 }
 
 class _CancelButton extends StatelessWidget {
-  const _CancelButton({
-    required this.cancelText,
-    required this.onCancel,
-  });
+  const _CancelButton({required this.cancelText, required this.onCancel});
   final String cancelText;
   final void Function() onCancel;
 
   @override
   Widget build(BuildContext context) {
     return COutlineButton(
-      margin: const EdgeInsets.only(
-        right: 4,
-      ),
+      margin: const EdgeInsets.only(right: 4),
       style: UIConstant.outlineStyle.copyWith(
         padding: const WidgetStatePropertyAll(
-          EdgeInsetsDirectional.symmetric(
-            horizontal: 12,
-            vertical: 8,
-          ),
+          EdgeInsetsDirectional.symmetric(horizontal: 12, vertical: 8),
         ),
       ),
       onPressed: onCancel,

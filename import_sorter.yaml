@@ -1,0 +1,4 @@
+# import_sorter.yaml
+comments: false  # Removes import comments
+ignored_files:
+  - lib/generated/**  # Ignore auto-generated files

@@ -3,8 +3,7 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
-// Project imports:
-import 'package:flutter_boilerplate/core/services/helpers/ui_helper.dart';
+import 'package:flutter_boilerplate/core/constants/size_constant.dart';
 
 class ReusableAnimationContainer extends StatefulWidget {
   const ReusableAnimationContainer({
@@ -38,11 +37,11 @@ class _ReusableAnimationContainerState extends State<ReusableAnimationContainer>
   Widget build(BuildContext context) {
     super.build(context);
     return AnimatedContainer(
-      width: mediaWidth(context),
+      width: sz.mediaWidth(context),
       curve: Curves.easeInOut,
       duration: Duration(milliseconds: 300 + (widget.index * 60)),
       transform: Matrix4.translationValues(
-        startAnimation ? 0 : mediaWidth(context),
+        startAnimation ? 0 : sz.mediaWidth(context),
         0,
         0,
       ),

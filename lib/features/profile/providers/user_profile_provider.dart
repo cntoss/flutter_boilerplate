@@ -4,7 +4,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 // Project imports:
 import 'package:flutter_boilerplate/core/models/common_response_model.dart';
-import 'package:flutter_boilerplate/core/services/helpers/dio_extension.dart';
+import 'package:flutter_boilerplate/core/services/helpers/dio/dio_extension.dart';
 import 'package:flutter_boilerplate/features/profile/models/profile.dart';
 import 'package:flutter_boilerplate/features/profile/service/user_profile_service.dart';
 
@@ -29,8 +29,9 @@ Future<CommonResponseModel> updateProfilePicture(
   String imagePath,
 ) async {
   final FormData data = FormData.fromMap({});
-  data.files
-      .add(MapEntry('profilePicImg', await MultipartFile.fromFile(imagePath)));
+  data.files.add(
+    MapEntry('profilePicImg', await MultipartFile.fromFile(imagePath)),
+  );
 
   return ref.watch(userProfileServiceProvider).updateProfileImage(data);
 }
